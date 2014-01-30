@@ -1,5 +1,5 @@
 # encoding: BINARY
-$ruby_inline=true
+$ruby_inline=false
 require "inline" if $ruby_inline
 require "stringio"
 
