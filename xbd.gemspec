@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.email       = ["shanebdavis@imikimi.com"]
   s.homepage    = ""
   s.summary     = %q{XBD - A hierarchical, self-describing binary format consisting of Tags, Attributes, and SubTags}
-  s.description = %q{TODO: Write a gem description}
+  s.description = %q{XBD - A hierarchical, self-describing binary format consisting of Tags, Attributes, and SubTags}
 
   s.rubyforge_project = "xbd"
 
