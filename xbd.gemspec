@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
   s.version     = Xbd::VERSION
   s.authors     = ["Shane Brinkman-Davis"]
   s.email       = ["shanebdavis@imikimi.com"]
-  s.homepage    = ""
-  s.summary     = %q{XBD - A hierarchical, self-describing binary format consisting of Tags, Attributes, and SubTags}
-  s.description = %q{TODO: Write a gem description}
+  s.homepage    = "https://github.com/Imikimi-LLC/xbd"
+  s.summary     = %q{A fast, simplified, XML-inspired binary file format.}
+  s.description = %q{The XBD gem allows you to create, load and save XBD files. XBD files are arbitrary, self-describing, hierarchical, binary data structures consisting of "tags", "attributes", and "sub-tags".}
 
   s.rubyforge_project = "xbd"
 
@@ -21,8 +21,4 @@ Gem::Specification.new do |s|
   s.add_dependency 'RubyInline', '~> 3.11.0'
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec', '~> 2.6.0'
-
-  # specify any dependencies here; for example:
-  # s.add_development_dependency "rspec"
-  # s.add_runtime_dependency "rest-client"
 end

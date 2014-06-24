@@ -168,7 +168,7 @@ module Xbd
         n=attrsd[name_id]
         v=valuesd[value_id]
         raise "attribute name id(#{name_id}) not in attribute-names dictionary" if !n
-        raise "attribute value id(#{value_id}) not in attribue-values dictionary" if !v
+        raise "attribute value id(#{value_id}) not in attribute-values dictionary" if !v
         attrs_hash[n]=v
       end
       tag_length-=(index-tag_start_index)

@@ -23,8 +23,6 @@ And run:
   require "xbd.rb"
   puts Xbd.load_from_file("your_xbd_filename.xbd")
 
-Master verison of this file lives in: imikimi_plugin_source/xbd/xbd.rb
-
 =end
 require File.join(File.dirname(__FILE__),"asi")
 require File.join(File.dirname(__FILE__),"xbd_dictionary")
