@@ -167,8 +167,8 @@ module Xbd
         attr_byte_size-=(index-i)
         n=attrsd[name_id]
         v=valuesd[value_id]
-        raise "attribute name id(#{name_id}) not in attribute-names dictionary" if !n
-        raise "attribute value id(#{value_id}) not in attribute-values dictionary" if !v
+        raise "attribute name id(#{name_id}) not in attribute-names dictionary (max value = #{attrsd.length})" if !n
+        raise "attribute value id(#{value_id}) not in attribute-values dictionary (max value = #{valuesd.length})" if !v
         attrs_hash[n]=v
       end
       tag_length-=(index-tag_start_index)

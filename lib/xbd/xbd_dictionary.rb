@@ -12,8 +12,10 @@ module Xbd
     def initialize(initial_values=[])
       @hash={}
       @array=[]
-      initial_values.each {|v| self<<(v)}
+      initial_values.each {|v| add v, false}
     end
+
+    def length; @array.length end
 
     # return String given an ID, or ID given a String
     def [](i) @hash[i] end
@@ -26,14 +28,7 @@ module Xbd
     end
 
     # add a String to the dictionary
-    def <<(str)
-      str = Dictionary.sanitize_string str
-      @hash[str] ||= begin
-        new_id = @array.length
-        @array << @hash[new_id] = str
-        new_id
-      end
-    end
+    def <<(str) add str end
 
     # convert to binary string
     def to_binary
@@ -48,5 +43,18 @@ module Xbd
       strings = lengths.collect {|len| encoded_dictionary.read len}
       [Dictionary.new(strings), index]
     end
+
+    private
+    # enforce_unique == false during loading, since technically, and xbd dictionary COULD have duplicate entries.
+    # Duplicate entries only reduces efficiency. It shouldn't break anything.
+    # XBD files shouldn't have dupes, but the current C++ implementation DOES create them rarely (bug).
+    def add(str, enforce_unique = true)
+      str = Dictionary.sanitize_string str
+      return @hash[str] if @hash[str] && enforce_unique
+
+      @hash[str] = new_id = @array.length
+      @array << @hash[new_id] = str
+    end
+
   end
 end
