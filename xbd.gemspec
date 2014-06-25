@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.email       = ["shanebdavis@imikimi.com"]
   s.homepage    = ""
   s.summary     = %q{XBD - A hierarchical, self-describing binary format consisting of Tags, Attributes, and SubTags}
-  s.description = %q{TODO: Write a gem description}
+  s.description = %q{XBD - A hierarchical, self-describing binary format consisting of Tags, Attributes, and SubTags}
 
   s.rubyforge_project = "xbd"
 
@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_dependency 'RubyInline', '~> 3.11.0'
+  # s.add_dependency 'RubyInline', '~> 3.11.0'
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec', '~> 2.6.0'
 
